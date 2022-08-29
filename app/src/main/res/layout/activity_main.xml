@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- ImageView for setting background of app -->
+    <ImageView
+        android:id="@+id/imgViewBackGrnd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_shade_1"
+        android:scaleType="centerCrop" />
+
+    <!-- Linear Layout used to add search elements-->
+    <LinearLayout
+        android:id="@+id/linLayoutInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- TextInput Layout for input text (hint or text shown as floating label)
+                 better than using EditText element because more functionality.-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputLayoutCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="4.5"
+            android:background="@android:color/transparent"
+            android:hint="Enter City Name"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white">
+
+            <!-- Add TextInputEditText element for user input-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtInputEdtEnterCityName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Search button -->
+        <ImageButton
+            android:id="@+id/imgBtnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:onClick="searchCityWeather"
+            android:src="@drawable/ic_search"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Display the city name user searched -->
+    <TextView
+        android:id="@+id/tvDispCityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linLayoutInput"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="City Name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <!-- Display temperature -->
+    <TextView
+        android:id="@+id/txtViewTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDispCityName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:padding="5dp"
+        android:text="25.0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <!-- Show icon representing current weather condition -->
+    <ImageView
+        android:id="@+id/imgViewConditionIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/txtViewTemp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        tools:src="@mipmap/ic_launcher" />
+
+    <!-- Display current weather condition -->
+    <TextView
+        android:id="@+id/txtViewCondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgViewConditionIcon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="5dp"
+        android:text="Weather Condition"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+</RelativeLayout>
+
+    <!--    &lt;!&ndash; Search button &ndash;&gt;-->
+    <!--<Button-->
+    <!--android:id="@+id/btnSearch"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:padding="5dp"-->
+    <!--android:text="Search"-->
+    <!--android:textColor="@color/white" />-->
