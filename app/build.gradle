@@ -40,5 +40,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     //HTTP library for JSON parsing of information retrieved from weather API
     implementation 'com.android.volley:volley:1.2.1'
+    //google play services to get location of device
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
 
 }

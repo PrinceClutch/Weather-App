@@ -136,6 +136,28 @@
         android:textColor="@color/white"
         android:textSize="40sp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewLattitude"
+        android:text="Latitude:"
+        android:textColor="@color/white"
+        android:layout_below="@id/txtViewCondition"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewLongitude"
+        android:text="Longitude:"
+        android:textColor="@color/white"
+        android:layout_below="@id/txtViewLattitude"
+        android:textSize="30dp"
+        />
+
+
+
 </RelativeLayout>
 
     <!--    &lt;!&ndash; Search button &ndash;&gt;-->
