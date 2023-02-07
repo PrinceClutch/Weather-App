@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Initialize variable to hold api key and url
     private String url = "";
-    private String apiKey = "52c948f0a19443fc98540148222808";
+    private String apiKey = "53916208c26b4c70b6232314230702";
 
 
     @Override
